@@ -36,10 +36,16 @@
 
 
   <a-marker preset='kanji'>
-    <a-light color="white" position="100 0 0" type="directional" intensity="2"></a-light>
+    <!-- <a-light color="white" position="100 0 0" type="directional" intensity="2"></a-light> -->
+          <a-entity light="type: directional;
+                       castShadow: true;
+                       intensity: 2;
+                       shadowCameraVisible: true;"
+                       position="100 0 0">
+          </a-entity>
           <a-entity id="earth">
-              <a-sphere radius="0.5"
-                  src="images/earth.png">
+              <a-sphere radius="0.5" shadow="cast: true; receive: true;"
+                  src="images/earth.png" rotation="0 0 0">
               </a-sphere>
               <a-animation attribute="rotation"
                   to="0 360 0"
@@ -49,17 +55,17 @@
           </a-entity>
 
           <a-entity id="moon">
-              <a-sphere radius="0.15" color="white" position="-2 0 0"
+              <a-sphere radius="0.15" color="white" shadow="cast: true; receive: true;" position="-1.5 0 0"
                   src="images/moon.jpg">
                   <a-animation attributes="rotation"
                       to="0 360 0"
-                      dur="112000"
+                      dur="10000"
                       easing="linear"
                       repeat="indefinite"></a-animation>
               </a-sphere>
               <a-animation attribute="rotation"
                   to="0 360 0"
-                  dur="112000"
+                  dur="10000"
                   easing="linear"
                   repeat="indefinite"></a-animation>
           </a-entity>
