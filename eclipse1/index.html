@@ -12,42 +12,42 @@
   .a-enter-vr-button {
     visibility: hidden;
   }
-  #fullscreen{
-    position: absolute;
-    background-image: url("images/fullscreen-icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 5%;
-    height: 10%;
-    top:85%;
-    left:90%;
-    opacity: 0.3;
-  }
-  #fullscreen:hover{
-  cursor: pointer;
-  opacity: 0.6;
-
-}
 
 </style>
 <body style='margin : 0px; overflow: hidden;'>
 
-  <a-scene embedded arjs='sourceType: webcam;'>
+  <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
+  <a-marker type='barcode' value='0'>
+    <a-entity line="start: 0 0.9 -6; end: 0 0.9 6; color: yellow"></a-entity>
+    <a-entity line="start: -6 0.9 0; end: 6 0.9 0; color: yellow"></a-entity>
 
-  <a-marker preset='kanji'>
-    <!-- <a-light color="white" position="100 0 0" type="directional" intensity="2"></a-light> -->
-          <a-entity light="type: directional;
-                       castShadow: true;
-                       intensity: 2;
-                       shadowCameraVisible: true;"
-                       position="200 0 0">
-          </a-entity>
-          <!-- aqui cambiamos la inclinación del eje de rotación de la Tierra  "0 0 -22.4"-->
+      <a-entity id="Sun"  >
+         <a-sphere radius="0.3"
+             color="orange" src="images/sun.jpg" rotation="0 0 0"  shader="flat" position ="0 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="100000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
+         <a-entity light="type: point;
+                      castShadow: true;
+                      intensity: 2;
+                      distance: 0;"
+                      position="0 1.2 0">
+         </a-entity>
+      </a-entity>
+    </a-marker>
+    <a-marker type='barcode' value='1'>
+      <a-entity line="start: 0 0.9 -3; end: 0 0.9 3; color: yellow"></a-entity>
+      <a-entity line="start: -3 0.9 0; end: 3 0.9 0; color: yellow"></a-entity>
+
           <a-entity rotation="0 0 0">
             <a-entity id="earth" >
-                <a-sphere radius="0.5" shadow="cast: true; receive: true;"
-                    src="images/earth.png" rotation="0 0 0">
+                <a-sphere radius="0.25" shadow="cast: true; receive: true;"
+                    src="images/earth.png" rotation="0 0 0" position="0 0.9 0">
                 </a-sphere>
                 <a-animation attribute="rotation"
                     to="0 360 0"
@@ -57,10 +57,12 @@
             </a-entity>
           </a-entity>
   <!-- Eclipse o no eclipse  Eclipse:"20 0 0" No Eclipse:"0 0 20"-->
-          <a-entity rotation="20 0 0">
+          <a-entity rotation="0 0 0" position="0 0.9 0">
+            <a-entity  geometry="primitive: ring; radiusInner: 1.149; radiusOuter: 1.155 segmentsTheta:64;"
+            material="side: double; color= #fff;" shader="flat" shadow="cast: false; receive: false;"rotation="-90 0 0"></a-entity>
             <a-entity id="moon">
-                <a-sphere radius="0.10" color="white" shadow="cast: true; receive: true;" position="-2 0 0"
-                    src="images/earth.jpg">
+                <a-sphere radius="0.02" color="white" shadow="cast: true; receive: true;" position="-1.15 0 0"
+                    src="images/moon.jpg">
                     <a-animation attributes="rotation"
                         to="0 360 0"
                         dur="20000"
@@ -78,13 +80,49 @@
           </a-entity>
 
   </a-marker>
+  <a-marker type='barcode' value='2'>
+    <a-entity line="start: 0 0.9 -3; end: 0 0.9 3; color: yellow"></a-entity>
+    <a-entity line="start: -3 0.9 0; end: 3 0.9 0; color: yellow"></a-entity>
 
+
+        <a-entity rotation="0 0 0">
+          <a-entity id="earth" >
+              <a-sphere radius="0.25" shadow="cast: true; receive: true;"
+                  src="images/earth.png" rotation="0 0 0" position="0 0.9 0">
+              </a-sphere>
+              <a-animation attribute="rotation"
+                  to="0 360 0"
+                  dur="4000"
+                  easing="linear"
+                  repeat="indefinite"></a-animation>
+          </a-entity>
+        </a-entity>
+  <!-- Eclipse o no eclipse  Eclipse:"20 0 0" No Eclipse:"0 0 20"-->
+        <a-entity rotation="25 0 0" position="0 0.9 0">
+          <a-entity geometry="primitive: ring; radiusInner: 1.145; radiusOuter: 1.155 segmentsTheta:64;"
+          material="side: double" rotation="-90 0 0" shadow="cast: false; receive: false;"></a-entity>
+          <a-entity id="moon">
+              <a-sphere radius="0.02" color="white" shadow="cast: true; receive: true;" position="-1.15 0 0"
+                  src="images/moon.jpg">
+                  <a-animation attributes="rotation"
+                      to="0 360 0"
+                      dur="20000"
+                      easing="linear"
+                      repeat="indefinite">
+                  </a-animation>
+              </a-sphere>
+              <a-animation attribute="rotation"
+                  to="0 360 0"
+                  dur="20000"
+                  easing="linear"
+                  repeat="indefinite">
+              </a-animation>
+          </a-entity>
+        </a-entity>
+
+  </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
   <div id="fullscreen"></div>
-  <script>
-    $("#fullscreen").click(function(){
-      $(document).toggleFullScreen(true);
-    });
-  </script>
+
 </body>
