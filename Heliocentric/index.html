@@ -17,13 +17,12 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
      <a-marker type='barcode' value='0'>
-       <a-plane material="shader:flat" position="-0.5 0 1" rotation="-90 0 0" width="0.8" height="0.8"src="images/logo.png"></a-plane>
-       <a-text value="Move the Earth marker to"  position="0 0 0.8" color="black" rotation="-90 0 0" ></a-text>
-       <a-text value="model a SOLSTICE"  position="0 0 1.2" color="black" rotation="-90 0 0" ></a-text>
+       <!-- <a-text value="Move the Earth marker to"  position="0 0 0.8" color="black" rotation="-90 0 0" ></a-text>
+       <a-text value="model a SOLSTICE"  position="0 0 1.2" color="black" rotation="-90 0 0" ></a-text> -->
 
        <a-entity line="start: 0 0 0; end: 0 1.8 0; color: yellow"></a-entity>
        <a-entity id="Sun"  >
-          <a-sphere radius="0.7"
+          <a-sphere radius="0.5"
               color="orange" src="images/sun.jpg" rotation="0 0 0"  shader="flat" position ="0 0.9 0">
               <a-animation attributes="rotation"
                   to="0 360 0"
@@ -32,7 +31,131 @@
                   repeat="indefinite">
               </a-animation>
           </a-sphere>
+       </a-entity>
+       <a-ring radius-inner="0.995" color="black" side ="double" radius-outer="1.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="1.995" color="black" side ="double" radius-outer="2.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="2.995" color="black" side ="double" radius-outer="3.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="3.995" color="black" side ="double" radius-outer="4.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="4.995" color="black" side ="double" radius-outer="5.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="5.995" color="black" side ="double" radius-outer="6.005" position="0 0.9 0" rotation="90 0 0"></a-ring>
+       <a-entity id="mercury">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="7000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-sphere radius=".08"
+             color="white" src="images/mercurymap.jpg" rotation="0 0 0"  shader="flat" position ="1 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="20000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
+       </a-entity>
+       <a-entity id="venus">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="18000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-sphere radius=".14"
+             color="white" src="images/venusmap.jpg" rotation="0 0 0"  shader="flat" position ="2 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="20000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
+       </a-entity>
+       <a-entity id="earth">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="20000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-ring radius-inner="0.24" color="black" side ="double" radius-outer="0.25" position="3 0.9 0" rotation="90 0 0"></a-ring>
+         <a-entity position= "3 0.9 0">
+           <a-sphere radius=".05"
+               color="white"  src="images/moon.jpg" rotation="0 0 0"  shader="flat" position="0.25 0 0">
 
+           </a-sphere>
+           <a-animation attributes="rotation"
+               to="0 360 0"
+               dur="2000"
+               easing="linear"
+               repeat="indefinite">
+           </a-animation>
+
+          </a-entity>
+
+           <a-sphere radius=".15"
+               color="white" src="images/earth.png" rotation="0 0 0"  shader="flat" position ="3 0.9 0">
+               <a-animation attributes="rotation"
+                   to="0 360 0"
+                   dur="20000"
+                   easing="linear"
+                   repeat="indefinite">
+               </a-animation>
+           </a-sphere>
+
+       </a-entity>
+       <a-entity id="mars">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="40000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-sphere radius=".14"
+             color="white" src="images/marsmap.jpg" rotation="0 0 0"  shader="flat" position ="4 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="20000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
+       </a-entity>
+       <a-entity id="jupiter">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="20000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-sphere radius=".32"
+             color="white" src="images/jupitermap.jpg" rotation="0 0 0"  shader="flat" position ="5 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="200000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
+       </a-entity>
+       <a-entity id="saturn">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="40000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-ring radius-inner="0.4" src="images/saturnringcolor.jpg" side ="double" radius-outer="0.5" position="6 0.9 0" rotation="90 65 0"></a-ring>
+         <a-sphere radius=".3"
+             color="white" src="images/saturnmap.jpg" rotation="0 0 0"  shader="flat" position ="6 0.9 0">
+             <a-animation attributes="rotation"
+                 to="0 360 0"
+                 dur="200000"
+                 easing="linear"
+                 repeat="indefinite">
+             </a-animation>
+         </a-sphere>
        </a-entity>
      </a-marker>
 
