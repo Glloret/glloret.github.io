@@ -19,8 +19,6 @@
      <a-marker type='barcode' value='0'>
        <!-- <a-text value="Move the Earth marker to"  position="0 0 0.8" color="black" rotation="-90 0 0" ></a-text>
        <a-text value="model a SOLSTICE"  position="0 0 1.2" color="black" rotation="-90 0 0" ></a-text> -->
-
-
        <a-entity id="Sun"  >
        <a-image scale ="2 2 0" src="images/EARTHt.png" rotation="-90 0 0" position="0 0.01 0">
        </a-entity>
@@ -81,6 +79,7 @@
          </a-animation>
                 <a-image src="images/MARSt.png" rotation="-90 0 0" position="5.6 0.04 0">
 
+                </a-image>
        </a-entity>
 
        <a-entity id="jupiter">
@@ -107,6 +106,120 @@
        </a-entity>
      </a-marker>
 
+     <a-marker type='barcode' value='1'>
+       <!-- <a-text value="Move the Earth marker to"  position="0 0 0.8" color="black" rotation="-90 0 0" ></a-text>
+       <a-text value="model a SOLSTICE"  position="0 0 1.2" color="black" rotation="-90 0 0" ></a-text> -->
+       <a-entity id="Sun"  >
+       <a-image scale ="2 2 0" src="images/SUNt.png" rotation="-90 0 0" position="0 0.01 0">
+       </a-entity>
+       <a-ring radius-inner="1.595" color="black" side ="double" radius-outer="1.605" position="0 0 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="2.595" color="black" side ="double" radius-outer="2.605" position="0 0 0" rotation="90 0 0"></a-ring>
+       <a-ring radius-inner="4" color="black" side ="double" radius-outer="4.01" position="0 0 0" rotation="90 0 0"></a-ring>
+      <a-ring segments-theta="80" radius-inner="5.595" color="black" side ="double" radius-outer="5.605" position="0 0 0" rotation="90 0 0"></a-ring>
+       <a-ring segments-theta="80" radius-inner="6.595" color="black" side ="double" radius-outer="6.605" position="0 0 0" rotation="90 0 0"></a-ring>
+       <a-ring segments-theta="80" radius-inner="7.595" color="black" side ="double" radius-outer="7.605" position="0 0 0" rotation="90 0 0"></a-ring>
+       <a-entity >
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="4000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+            <a-image src="images/MERCURYt.png" rotation="-90 0 0" position="1.6 0.04 0">
+
+       </a-entity>
+
+
+       <a-entity >
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="9000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+            <a-image src="images/VENUSt.png" rotation="-90 0 0" position="2.6 0.04 0">
+
+       </a-entity>
+
+       <a-entity id="earth">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="20000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-ring radius-inner="0.8" color="black" side ="double" radius-outer="0.82" position="4 0.04 0" rotation="90 0 0"></a-ring>
+
+         <a-entity position= "4 0.04 0">
+           <a-entity>
+           <a-image src="images/MOONt.png" rotation="-90 0 0"  scale="0.5 0.5 0" position="0.8 0.04 0">
+           <a-animation attributes="rotation"
+               to="-90 360 0"
+               dur="20000"
+               easing="linear"
+               repeat="indefinite">
+           </a-animation>
+           </a-image>
+           </a-entity>
+           <a-animation attributes="rotation"
+               to="0 360 0"
+               dur="20000"
+               easing="linear"
+               repeat="indefinite">
+           </a-animation>
+
+
+          </a-entity>
+
+
+           <a-image  src="images/EARTHt.png" rotation="-90 0 0"  position ="4 0.04 0">
+               <a-animation attributes="rotation"
+                   to="-90 360 0"
+                   dur="20000"
+                   easing="linear"
+                   repeat="indefinite">
+               </a-animation>
+           </a-image>
+
+       </a-entity>
+
+
+
+       <a-entity id="mars">
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="100000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+          <a-image src="images/MARSt.png" rotation="-90 0 0" position="5.6 0.04 0">
+
+                </a-image>
+       </a-entity>
+
+       <a-entity >
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="200000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-image src="images/JUPITERt.png" rotation="-90 0 0" position="6.6 0.01 0">
+         </a-image>
+
+       </a-entity>
+
+       <a-entity >
+         <a-animation attributes="rotation"
+             to="0 360 0"
+             dur="300000"
+             easing="linear"
+             repeat="indefinite">
+         </a-animation>
+         <a-image src="images/SATURNt.png" rotation="-90 0 0" position="7.6 0.01 0">
+         </a-image>
+       </a-entity>
+     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 
