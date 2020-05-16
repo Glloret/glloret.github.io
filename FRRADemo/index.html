@@ -8,13 +8,15 @@
         <a-scene embedded arjs>
             <a-marker preset="hiro">
                 <a-entity
-                position="-4 0 0"
+                position="-4 -1 0"
                 rotation= "-90 0 0"   
                 scale="0.4 0.4 0.4"
-                gltf-model="./models/grimoire/scene.gltf"
-                >
+                gltf-model="./models/grimoire/scene.gltf">
 
             </a-entity>
+            <a-entity light="type: point; intensity: 2; distance: 30; decay: 1"
+            position="0 10 0"></a-entity>
+            <a-entity light="type: ambient; intensity: 2.2; color: #FFF"></a-entity>
 
             </a-marker>
         <a-entity camera></a-entity>
