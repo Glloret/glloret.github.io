@@ -1,0 +1,74 @@
+body {
+	background-color: #333; color: #bbb; line-height: normal;
+	font-family: Lucida Grande, Lucida Sans, Arial, Helvetica Neue, Verdana, Geneva, sans-serif;
+	font-size: 11px; font-weight: normal; text-decoration: none;
+	line-height: 1.5em;
+}
+
+input.ui-slider-input {
+	display : none !important;
+}
+.ui-slider {
+	margin: 10px !important;
+	z-index:1;
+ 	background: transparent url('../img/slider.png'); 
+ 	display: inline-block; 
+ 	height: 28px; 
+ 	margin:0 2% 0 20px; 
+ 	overflow: visible; 
+ 	padding: 0; 
+ 	position: relative; 
+ 	top: 4px; 
+ 	border: none; 
+}
+
+#controles{
+	position: fixed;
+	top: 70%;
+	width: 25%;
+	left:70%;
+	z-index: 14;
+	border: 2px solid white;
+	padding: 15px;
+	margin: 5px;
+	border-radius: 8px;
+}
+
+canvas {
+	position:relative;
+	width: 100%;
+
+	
+	background: url(../img/blackboard-backgrounds.jpg);
+	background-size: 100%;
+	
+}
+.spacer{
+	height:500px;
+}
+
+.ui-slider-handle { 
+ background: transparent url('../img/slider_handle.png'); 
+  border: none; 
+ cursor: default; 
+ display: block; 
+ height:36px; 
+ margin-left: -18px; 
+ margin-top: -18px; 
+ position: absolute; 
+ overflow: hidden; 
+ top: 50%; 
+ width:36px; 
+ z-index: 15; 
+
+}
+span {
+	font-size: 18px;
+	width:70px;
+
+}
+
+#controles >div <div {
+	float: right;
+}
+
