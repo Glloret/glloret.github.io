@@ -61,9 +61,9 @@ void draw_axes() {
   textFont(font3);
   fill(255);
   text("1", 1340, 310, 670, 70);
-  text("time (s)", SCREEN_WIDTH-80, 310, 100, 25);
+  text("tiempo (s)", SCREEN_WIDTH-80, 310, 100, 25);
 
-  text ("V(t) Volts", 2, 35);
+  text ("V(t) Voltios", 2, 35);
 
   PFont font4;
   font4 = createFont("DK Crayon Crumble.ttf",14); 
@@ -114,7 +114,7 @@ void show_functions(int amp, int freq, float fase) {
   }
   fill(255);
   text(s, SCREEN_WIDTH/3, SCREEN_HEIGHT-50);
-  text("Alternate Current (AC)", 300, 40);
+  text("Corriente Alterna (CA)", 300, 40);
   textFont(font2);
   text("IES Santa Pola. Gaspar Lloret 2012", 700, 580);
 }
