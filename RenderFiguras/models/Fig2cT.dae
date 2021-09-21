@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+  <asset>
+    <contributor>
+      <author_website>/var/folders/rf/xlf97w2j4kj_d4f52m289df40000gn/T/com.sketchup.SketchUp.2017.gasparPCOiva.fbx</author_website>
+    </contributor>
+    <unit meter="1" />
+  </asset>
+  <library_lights />
+  <library_materials>
+    <material id="M_2x2" name="M_2x2">
+      <instance_effect url="#effect-M_2x2" />
+    </material>
+    <material id="M_2x2L" name="M_2x2L">
+      <instance_effect url="#effect-M_2x2L" />
+    </material>
+    <material id="M_2x3cortada" name="M_2x3cortada">
+      <instance_effect url="#effect-M_2x3cortada" />
+    </material>
+    <material id="M_2x3Linvertida" name="M_2x3Linvertida">
+      <instance_effect url="#effect-M_2x3Linvertida" />
+    </material>
+    <material id="M_2x1" name="M_2x1">
+      <instance_effect url="#effect-M_2x1" />
+    </material>
+    <material id="M_2x1_copy" name="M_2x1_copy">
+      <instance_effect url="#effect-M_2x1_copy" />
+    </material>
+    <material id="M_2x2cortada" name="M_2x2cortada">
+      <instance_effect url="#effect-M_2x2cortada" />
+    </material>
+    <material id="rampa" name="rampa">
+      <instance_effect url="#effect-rampa" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="effect-M_2x2">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x2_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x2L">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x2L_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x3cortada">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x3cortada_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x3Linvertida">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x3Linvertida_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x1">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x1_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x1_copy">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x1_copy_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-M_2x2cortada">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>M_2x2cortada_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect-rampa">
+      <profile_COMMON>
+        <newparam sid="DiffuseColor-surface">
+          <surface type="2D">
+            <init_from>rampa_texture</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="DiffuseColor-sampler">
+          <sampler2D>
+            <source>DiffuseColor-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <wrap_p>WRAP</wrap_p>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="COMMON">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="DiffuseColor-sampler" texcoord="uv0" />
+            </diffuse>
+            <specular>
+              <color>0.33000000000000008 0.33000000000000008 0.33000000000000008 1</color>
+            </specular>
+            <shininess>
+              <float>20</float>
+            </shininess>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_cameras />
+  <library_geometries>
+    <geometry id="mesh_1">
+      <mesh>
+        <source id="mesh_1-position" name="position">
+          <float_array id="mesh_1-position-array" count="108">200 0 -0 0 0 -0 0 0 -200 200 0 -200 100 200 -0 3.3839597790574804E-14 200 -0 0 0 -0 200 0 -0 200 100 -0 100 100 -0 0 0 -200 0 0 -0 3.3839597790574804E-14 200 -0 0 300 -200 200 0 -200 0 0 -200 0 300 -200 100 300 -200 100 100 -200 200 100 -200 200 0 -0 200 0 -200 200 100 -200 200 100 -0 200 100 -200 100 100 -200 100 100 -0 200 100 -0 100 100 -200 100 300 -200 100 200 -0 100 100 -0 100 200 -0 100 300 -200 0 300 -200 3.3839597790574804E-14 200 -0 </float_array>
+          <technique_common>
+            <accessor source="#mesh_1-position-array" count="36" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh_1-normal" name="normal">
+          <float_array id="mesh_1-normal-array" count="108">0 -1 -0 0 -1 -0 0 -1 -0 0 -1 -0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 6.56311312900543E-11 2.953400908052452E-10 -1 6.56311312900543E-11 2.953400908052452E-10 -1 6.56311312900543E-11 2.953400908052452E-10 -1 6.56311312900543E-11 2.953400908052452E-10 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 -0 1 0 -0 1 0 -0 1 0 -0 0 1 -0 0 1 -0 0 1 -0 0 1 -0 1 0 -0 1 0 -0 1 0 -0 1 0 -0 0 0.894427190999916 0.4472135954999581 0 0.894427190999916 0.4472135954999581 0 0.894427190999916 0.4472135954999581 0 0.894427190999916 0.4472135954999581 </float_array>
+          <technique_common>
+            <accessor source="#mesh_1-normal-array" count="36" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh_1-texcoord" name="texcoord">
+          <float_array id="mesh_1-texcoord-array" count="50">0 0 1 0 1 1 0 1 0.5 1 9.024280552382502E-10 1 1 0.5 0.5 0.5 1 0 1 0.6675824175824181 0 1.00137362637363 1 1.00969529085873 0.5 1.00969529085873 0.5 0.3365650969529091 0 0.3365650969529091 1 0.9798387096774189 0 0.9798387096774189 0.9798387096774189 1 0.9798387096774189 0 1 0.9918367346938781 0 0.4959183673469391 1 5.921443932009529E-10 1 0.9876625342313559 -1.8048561104765002E-09 0.9876625342313559 0 5.921443932009529E-10 </float_array>
+          <technique_common>
+            <accessor source="#mesh_1-texcoord-array" count="25" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh_1-vertices">
+          <input semantic="POSITION" source="#mesh_1-position" />
+        </vertices>
+        <polylist material="mat0" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>0 0 0 1 1 1 2 2 2 3 3 3</p>
+          <vcount>4</vcount>
+        </polylist>
+        <polylist material="mat1" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>4 4 4 5 5 5 6 6 0 7 7 1 8 8 6 9 9 7</p>
+          <vcount>6</vcount>
+        </polylist>
+        <polylist material="mat2" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>10 10 0 11 11 8 12 12 9 13 13 10</p>
+          <vcount>4</vcount>
+        </polylist>
+        <polylist material="mat3" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>14 14 0 15 15 1 16 16 11 17 17 12 18 18 13 19 19 14</p>
+          <vcount>6</vcount>
+        </polylist>
+        <polylist material="mat4" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>20 20 0 21 21 1 22 22 15 23 23 16</p>
+          <vcount>4</vcount>
+        </polylist>
+        <polylist material="mat5" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>24 24 17 25 25 3 26 26 0 27 27 18</p>
+          <vcount>4</vcount>
+        </polylist>
+        <polylist material="mat6" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>28 28 1 29 29 19 30 30 20 31 31 0</p>
+          <vcount>4</vcount>
+        </polylist>
+        <polylist material="mat7" count="1">
+          <input semantic="VERTEX" source="#mesh_1-vertices" offset="0" />
+          <input semantic="NORMAL" source="#mesh_1-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#mesh_1-texcoord" offset="2" />
+          <p>32 32 21 33 33 22 34 34 23 35 35 24</p>
+          <vcount>4</vcount>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_images>
+    <image id="M_2x2_texture" name="M_2x2_texture">
+      <init_from>fig2cT/M_2x2.png</init_from>
+    </image>
+    <image id="M_2x2L_texture" name="M_2x2L_texture">
+      <init_from>fig2cT/M_2x2L.png</init_from>
+    </image>
+    <image id="M_2x3cortada_texture" name="M_2x3cortada_texture">
+      <init_from>fig2cT/M_2x3cortada.png</init_from>
+    </image>
+    <image id="M_2x3Linvertida_texture" name="M_2x3Linvertida_texture">
+      <init_from>fig2cT/M_2x3Linvertida.png</init_from>
+    </image>
+    <image id="M_2x1_texture" name="M_2x1_texture">
+      <init_from>fig2cT/M_2x1.png</init_from>
+    </image>
+    <image id="M_2x1_copy_texture" name="M_2x1_copy_texture">
+      <init_from>fig2cT/M_2x1_copy.png</init_from>
+    </image>
+    <image id="M_2x2cortada_texture" name="M_2x2cortada_texture">
+      <init_from>fig2cT/M_2x2cortada.png</init_from>
+    </image>
+    <image id="rampa_texture" name="rampa_texture">
+      <init_from>fig2cT/rampa.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="Scene">
+      <node id="Model" sid="Model" name="Model" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Mesh1" sid="Mesh1" name="Mesh1" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#mesh_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="mat0" target="#M_2x2" />
+                <instance_material symbol="mat1" target="#M_2x2L" />
+                <instance_material symbol="mat2" target="#M_2x3cortada" />
+                <instance_material symbol="mat3" target="#M_2x3Linvertida" />
+                <instance_material symbol="mat4" target="#M_2x1" />
+                <instance_material symbol="mat5" target="#M_2x1_copy" />
+                <instance_material symbol="mat6" target="#M_2x2cortada" />
+                <instance_material symbol="mat7" target="#rampa" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations />
+  <scene>
+    <instance_visual_scene url="#Scene" />
+  </scene>
+</COLLADA>
