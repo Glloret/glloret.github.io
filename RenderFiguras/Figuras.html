@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- possible content values: default, black or black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        .selector{      
+            width:100%;
+            heigh:100%;
+            margin: auto;
+            border: 3px solid rgb(29, 29, 29);
+            margin:10px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgb(71, 71, 71) ;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+        #square {
+            position:relative;
+            width: 99%;
+            margin: auto;
+            
+        }
+
+        @media all and (orientation:portrait) {
+            /* Style adjustments for landscape mode goes here */
+            .selector{   
+                font-size: 15px;
+                height:50px;
+                line-height: 50px;;
+ 
+
+            }
+            #botones {
+                margin-top:50px;
+                width:100%;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap:15px;
+                grid-template-rows: auto auto auto;
+            }
+            #square {
+                width:99%;
+                margin-top: 0px;
+                
+            }
+            #square:after{
+            content:"";
+            display:block;
+            padding-bottom:100%;
+        } 
+         #canvas {
+            position:absolute;
+            width: 100%;
+            height:100%;
+            border-radius: 10px;
+           border-style: solid;
+           border-color: black;
+        }
+        }
+        @media screen 
+        and (min-device-width: 1200px) 
+        and (max-device-width: 1600px) {
+            #container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding:1rem;
+            }
+            #botones {
+                margin-top:50px;
+                width:100%;
+                display: grid;
+                gap:15px;
+                grid-template-columns: auto auto auto auto;              
+                grid-template-rows: auto auto auto;
+            }
+            #botones.div{
+                padding:1rem;
+            }
+            #canvas {
+            position:absolute;
+            width: 100%;
+            height:100%;
+            border-radius: 10px;
+           border-style: solid;
+           border-color: black;
+        }
+            #square {
+                width:99%;
+                margin-top: 0px;
+                
+            }
+            
+            .container>div::after{
+            content:"";
+            display: block;
+            padding-top:100%;
+        } 
+
+            
+        }
+
+    </style>
+</head>
+<body>
+        <div class='container' id="container">
+        <div class= 'square' id='square'>
+            <canvas id="canvas"></canvas> 
+
+
+        </div>
+        <div class= 'square' id="botones">
+            <div num='1' escala='4' class="selector">Figura 1</div>
+            <div num='2' escala='4' class="selector">Figura 2</div>
+            <div num='3' escala='10' class="selector">Figura 3</div>
+            <div num='4' escala='8' class="selector">Figura 4</div>
+            <div num='5' escala='4' class="selector">Figura 5</div>
+            <div num='6' escala='7' class="selector">Figura 6</div>
+            <div num='7' escala='6' class="selector">Figura 7</div>
+            <div num='8' escala='11' class="selector">Figura 8</div>
+            <div num='9' escala='6' class="selector">Figura 9</div>
+            <div num='10' escala='5' class="selector">Figura 10</div>
+            <div num='11' escala='8' class="selector">Figura 11</div>
+            <div num='12' escala='5' class="selector">Figura 12</div>
+        </div>
+    </div>
+
+    
+</body>
+<script type='module'>
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
+    import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js';
+    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js';
+    var scene, camera, renderer, controls, figura;
+    function main(){
+        const canvas = document.querySelector('#canvas');
+        renderer = new THREE.WebGLRenderer({canvas}, { antialias: true });
+        scene = new THREE.Scene();
+        let canvasWidth= 500;
+        let canvasHeight= 500;
+        let viewSize = 0.5;
+        let aspectRatio = canvas.clientWidth/canvas.clientHeight;
+        let     left = -0.25,
+                right = 0.25,
+                top = 0.25,
+                bottom = -0.25,
+                near = -10,
+                far = 30;
+        camera = new THREE.OrthographicCamera(
+            left,
+            right,
+            top,
+            bottom,
+            near,
+            far);
+        scene.background = new THREE.Color( 0xaaaaaa );
+
+          const light = new THREE.AmbientLight( 0xffffff, 1 ); // soft white light
+            scene.add( light );
+
+        // const directionalLight = new THREE.DirectionalLight( 0xaaaaaa, 0.7 );
+		// directionalLight.position.set( -1.5, 0.5, 0 ).normalize();
+		// scene.add( directionalLight );
+ 
+        // const directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        // directionalLight2.position.set( 1.5, 0.5, 0 ).normalize();
+        // scene.add( directionalLight2 );
+
+        // const directionalLight3 = new THREE.DirectionalLight( 0xffffff, 0.9 );
+        // directionalLight3.position.set( 0, 0.5, 1.5 ).normalize();
+        // scene.add( directionalLight3 );
+        // const directionalLight4 = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        // directionalLight4.position.set( 0, 0.5, -1.5 ).normalize();
+        // scene.add( directionalLight4 );
+
+        // GLB Loader
+        // const loader = new GLTFLoader();
+        // loader.load( 'models/fig2.glb', function ( gltf ) {
+        //     figura= gltf.scene
+        //     scene.add( gltf.scene );
+        // }, undefined, function ( error ) {
+        //     console.error( error );
+        // } );
+        addFigure(1,4);
+        camera.position.x = 10;
+        camera.position.y = 10;
+        camera.position.z = 10;
+ 
+        controls = new OrbitControls(camera, renderer.domElement);
+
+        controls.enablePan = false;
+        controls.enableZoom = true;
+        controls.maxPolarAngle = Math.PI / 2;
+ 
+        controls.enableDamping = true;
+
+    }
+    function animate() {
+        controls.update();
+        //camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        //console.log(camera.aspect);
+        if (resizeRendererToDisplaySize(renderer)) {
+            const canvas = renderer.domElement;
+            camera.aspect = canvas.clientWidth / canvas.clientHeight;
+            camera.updateProjectionMatrix();
+        }
+ 
+       
+        renderer.render(scene, camera);
+        //console.log(scene.children);
+        window.requestAnimationFrame(animate);
+    }
+    function removeFigure(){
+        scene.remove(scene.children[4]);
+    }
+    function addFigure(num,escala){
+        // GLB Loader
+        const loader = new GLTFLoader();
+        loader.load( 'models/fig' + num +'.glb', function ( gltf ) {
+            figura= gltf.scene
+            figura.scale.set(escala,escala,escala);
+            scene.add( gltf.scene );
+        }, undefined, function ( error ) {
+            console.error( error );
+        } );
+
+    }
+    function resizeRendererToDisplaySize(renderer) {
+        const canvas = renderer.domElement;
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+        const needResize = canvas.width !== width || canvas.height !== height;
+        if (needResize) {
+            renderer.setSize(width, height, false);
+        }
+        return needResize;
+    }
+
+    main();
+    //scene.remove(figura);
+    animate();
+    const botones = document.getElementById('botones');
+    botones.addEventListener('click', event => {
+       // Check if it’s the list element, we want the clicks only from them
+        if (event.target.classList.contains('selector')) {
+            console.log('The item ' + event.target.getAttribute('num') + ' was just clicked'
+            + event.target.getAttribute('escala'));
+        }
+        scene.remove(figura);
+        addFigure(event.target.getAttribute('num'),event.target.getAttribute('escala'));
+        camera.position.x = 10;
+        camera.position.y = 10;
+        camera.position.z = 10;
+
+    });
+    
+
+</script>
+</html>
